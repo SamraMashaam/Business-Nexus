@@ -22,7 +22,7 @@ function Login() {
   return (
     <div className="flex min-h-screen">
      
-      <div className="w-1/2 bg-gray-800 flex flex-col justify-center items-center px-8">
+      <div className="w-1/2 bg-gradient-to-b from-emerald-500 via-slate-600 to-gray-800 flex flex-col justify-center items-center px-8">
         <h2 className="text-4xl font-bold text-white mb-6">Welcome Back</h2>
         <form className="bg-emerald-400 p-8 rounded-lg shadow-md w-full max-w-md">
           <div className="mb-4">

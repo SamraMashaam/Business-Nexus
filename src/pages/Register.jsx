@@ -13,7 +13,7 @@ const Register = () => {
         </div>
 
         {/* Right Section - Register Form */}
-        <div className="w-1/2 flex items-center justify-center bg-gray-800 px-8">
+        <div className="w-1/2 flex items-center justify-center bg-gradient-to-b from-gray-800 via-slate-600 to-emerald-500 px-8">
           <div className="w-full max-w-md">
             <h2 className="text-3xl font-bold mb-6 text-white">Create an Account</h2>
             <form className="bg-emerald-400 p-8 rounded-lg shadow-md w-full max-w-md">

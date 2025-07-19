@@ -9,8 +9,8 @@ const SidebarInvestor = () => {
 
       <nav className="space-y-6">
         <Link
-          to="/investor/profile"
-          className="flex items-center gap-3 hover:text-blue-400"
+          to="/profile/investor/23"
+          className="flex items-center gap-3 hover:text-emerald-400"
         >
           <User size={20} /> Profile
         </Link>
@@ -24,7 +24,7 @@ const SidebarInvestor = () => {
 
         <Link
           to="/"
-          className="flex items-center gap-3 hover:text-blue-400 mt-auto"
+          className="flex items-center gap-3 hover:text-red-400 mt-auto"
         >
           <LogOut size={20} /> Sign Out
         </Link>
