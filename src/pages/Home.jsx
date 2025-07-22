@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { Menu } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import heroImage from "/home.webp"; 
+import heroImage2 from "/home2.jpg"; 
+import StatsSection from "../components/StatsSection";
 
 const Home = () => {
   const [activated, setActivated] = useState(false);
@@ -103,33 +105,77 @@ const Home = () => {
       )}
 
       {/* MAIN CONTENT */}
-      {activated && (
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1 }}
-          className="absolute top-[13rem] w-full px-6 sm:px-10"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-            {/* LEFT TEXT */}
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-bold mb-3">Empowering Innovation</h2>
-              <p className="text-emerald-100 text-sm sm:text-base">
-                Whether you're a budding entrepreneur or an experienced investor, Business Nexus is the space where groundbreaking ideas meet powerful backers.
-              </p>
-            </div>
+       {activated && (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 1 }}
+    className="pt-[13rem]" // add padding to push content below nav
+  >
+   
+    <section className="px-6 sm:px-10 py-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <div>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-white">Empowering Innovation</h2>
+          <p className="text-emerald-100 text-sm sm:text-base">
+            Whether you're a budding entrepreneur or an experienced investor, Business Nexus is where ideas meet opportunity.
+          </p>
+        </div>
+        <div>
+          <img
+            src={heroImage}
+            alt="Startup Illustration"
+            className="rounded-xl shadow-lg w-full max-h-72 sm:max-h-96 object-cover opacity-80"
+          />
+        </div>
+      </div>
+    </section>
 
-            {/* RIGHT IMAGE */}
-            <div>
-              <img
-                src={heroImage}
-                alt="Startup Illustration"
-                className="rounded-xl shadow-lg w-full max-h-72 sm:max-h-96 object-cover opacity-80"
-              />
-            </div>
-          </div>
-        </motion.div>
-      )}
+    
+    <section className="px-6 sm:px-10 py-12 bg-emerald-600 text-gray-900 border-t-5 border-b-5 border-emerald-400">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        
+        <div>
+          <img
+            src={heroImage2}
+            alt="Vision"
+            className="rounded-xl shadow-lg w-full max-h-72 sm:max-h-96 object-cover"
+          />
+        </div>
+        <div>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3">Why Choose Us?</h2>
+          <p className="text-base sm:text-lg">
+            We bring together curated startups and visionary investors, offering tools, insights, and secure communication channels to foster meaningful partnerships.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <StatsSection />
+    </section>
+
+    
+    <section className="px-6 sm:px-10 py-12 bg-gray-900 text-white">
+      <div className="text-center max-w-2xl mx-auto">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4">Ready to Get Started?</h2>
+        <p className="mb-6 text-emerald-100">
+          Whether you're here to fund or be funded, take the first step and join our network today.
+        </p>
+        <div className="flex justify-center gap-4">
+          <button onClick={loginPage} className="bg-emerald-600 px-6 py-2 rounded hover:bg-emerald-700">
+            Login
+          </button>
+          <button onClick={registerPage} className="bg-white text-emerald-700 px-6 py-2 rounded hover:bg-emerald-100">
+            Register
+          </button>
+        </div>
+      </div>
+    </section>
+    
+  </motion.div>
+)}
+
     </div>
   );
 };
